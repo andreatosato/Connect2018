@@ -1,6 +1,6 @@
 Guida del 12/12/2018
 
-##Prepara la soluzione
+## Prepara la soluzione
 Funziona con Python 3.6, non con i precedenti e non con i successivi!
 ```bash
  py -3.6 -m venv .env
