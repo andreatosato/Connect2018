@@ -5,14 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ConnectWPF2018"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="650" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="9*"/>
-            <RowDefinition Height="1*"/>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
         </Grid.RowDefinitions>
-        <Label Content="Hello .NET Core!" HorizontalAlignment="Center" VerticalAlignment="Center"
-               FontSize="40"/>
-        <Button Content="Exit" Grid.Row="1" FontSize="20" Click="ButtonExit_Click"/>
+
+        <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="0">
+            <Label Content="Null reference String" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20"></Label>
+            <Button Content="Nullable reference types" FontSize="20" Click="NullReference_Click" Margin="20,5"/>
+            <Button Content="Nullable reference types C#8" FontSize="20" Click="NullReferenceNullable_Click" Margin="20,5"/>
+            <Button Content="Null conditional indexing operator" FontSize="20" Click="NullReferenceOperator_Click" Margin="20,5"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="1">
+            <Label Content="Ranges and indices" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20"></Label>
+            <Button Content="Range" FontSize="20" Click="Range_Click" Margin="20,5"/>
+            <Button Content="Range Example 1" FontSize="20" Click="RangeExample1_Click" Margin="20,5"/>
+            <Button Content="Range Example 2" FontSize="20" Click="RangeExample2_Click" Margin="20,5"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="0">
+            <Label Content="Asynchronous streams" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20"></Label>
+            <Button Content="Async Stream" FontSize="20" Click="AsyncStream_Click" Margin="20,5"/>
+        </StackPanel>
+
+        <Button Content="Exit" FontSize="15" Click="ButtonExit_Click" Grid.Row="2" Grid.ColumnSpan="2" Margin="5,2"/>
     </Grid>
 </Window>
