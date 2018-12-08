@@ -12,7 +12,8 @@ dotnet new wpf -o ConnectWPF2018
 cd ConnectWPF2018
 dotnet run
 ```
-
+```cmd
 dotnet new sln 
-dotnet sln Connect2018.sln add ConnectForm2018
+dotnet sln Connect2018.sln add ConnectForm2018 
 dotnet sln Connect2018.sln add ConnectWPF2018
+```
